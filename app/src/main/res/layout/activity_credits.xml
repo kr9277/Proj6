@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Credits_Activity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="249dp"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:text="Credits Activity: "
+        android:textColor="#213BCC"
+        android:textSize="22sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.6" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="274dp"
+        android:layout_height="0px"
+        android:layout_weight="1.5"
+        android:text="This project was created by karin"
+        android:textColor="#9C27B0"
+        android:textSize="18sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+</LinearLayout>
