@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnCreateCont
     Button btn1, btn2, btn3;
     String name;
     int i = 0; // the click's counter
-    Intent intent;
     SharedPreferences settings;
 
     @Override
@@ -66,16 +65,8 @@ public class MainActivity extends AppCompatActivity implements View.OnCreateCont
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         String str = item.getTitle().toString();
         name = et.getText().toString();
-        if(str.equals("Main Activity")){
-            SharedPreferences.Editor editor = settings.edit();
-            editor.putString("name", name);
-            editor.putInt("counter", i);
-            editor.commit();
-        }
-        else if(str.equals("Credits Activity")){
-            intent = new Intent(this, Credits_Activity.class);
-            intent.putExtra("name", name);
-            intent.putExtra("counter", i);
+        if(str.equals("Credits Activity")){
+            Intent intent = new Intent(this, Credits_Activity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

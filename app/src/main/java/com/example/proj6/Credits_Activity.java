@@ -17,9 +17,6 @@ import android.widget.TextView;
 
 public class Credits_Activity extends AppCompatActivity implements View.OnCreateContextMenuListener {
     TextView tv1, tv2;
-    String name;
-    int counter;
-    Intent gi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +24,6 @@ public class Credits_Activity extends AppCompatActivity implements View.OnCreate
         setContentView(R.layout.activity_credits);
         tv1 = findViewById(R.id.tv1);
         tv2 = findViewById(R.id.tv2);
-        gi = getIntent();
-        name = gi.getStringExtra("name");
-        counter = gi.getIntExtra("counter", 0);
     }
     /**
      * onCreateOptionsMenu method
@@ -54,17 +48,7 @@ public class Credits_Activity extends AppCompatActivity implements View.OnCreate
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         String str = item.getTitle().toString();
         if(str.equals("Main Activity")){
-            gi.putExtra("name", name);
-            gi.putExtra("counter", counter);
-            setResult(RESULT_OK, gi);
             finish();
-        }
-        else if(str.equals("Credits Activity")){
-            Intent si = new Intent(this, Credits_Activity.class);
-            si.putExtra("name", name);
-            si.putExtra("counter", counter);
-            startActivity(si);
-
         }
         return super.onOptionsItemSelected(item);
     }
